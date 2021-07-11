@@ -29,15 +29,37 @@ RDEPENDS_${PN} = " \
 
 RRECOMMENDS_${PN} = " \
                      kernel-module-ipv6 \
-                     kernel-module-nf-conntrack-ipv6 \
+                     kernel-module-ipt-reject \
+                     kernel-module-iptable-mangle \
+                     kernel-module-iptable-raw \
+                     kernel-module-ip6table-raw \
+                     kernel-module-ip6t-reject \
+                     kernel-module-ip6t-rt \
+                     kernel-module-ip6table-mangle \
+                     kernel-module-nf-conntrack \
                      kernel-module-nf-log-common \
+                     kernel-module-nf-conntrack-broadcast \
+                     kernel-module-nf-conntrack-ftp \
+                     kernel-module-nf-conntrack-netbios-ns \
                      kernel-module-nf-log-ipv4 \
                      kernel-module-nf-log-ipv6 \
-                     kernel-module-nf-addrtype \
-                     kernel-module-nf-limit \
-                     kernel-module-nf-log \
-                     kernel-module-nf-recent \
+                     kernel-module-nf-log-ipv4 \
+                     kernel-module-nf-log-ipv6 \
+                     kernel-module-nf-nat-ftp \
+                     kernel-module-xt-addrtype \
+                     kernel-module-xt-comment \
+                     kernel-module-xt-conntrack \
+                     kernel-module-xt-hashlimit \
+                     kernel-module-xt-hl \
+                     kernel-module-xt-multiport \
+                     kernel-module-xt-ratetest \
+                     kernel-module-xt-socket \
+                     kernel-module-xt-tcpudp \
+                     kernel-module-xt-limit \
+                     kernel-module-xt-log \
+                     kernel-module-xt-recent \
 "
+
 
 do_install_append() {
     install -d ${D}${systemd_unitdir}/system/
